@@ -48,13 +48,20 @@ const HeroSection: React.FC = () => {
         <br /> Build Solutions.
         <br /> Ship Results.
       </h1>
-      <p ref={subRef} className="mt-6 max-w-2xl text-center text-lg md:text-xl">
+      <p
+        ref={subRef}
+        className="mt-6 max-w-2xl text-center text-lg md:text-xl font-bold"
+      >
         Hi! I&apos;m Lee Flannery.
       </p>
       <p ref={subRef} className="mt-6 max-w-2xl text-center text-lg md:text-xl">
-        I connect technical possibilities with real business problems, then
-        build the web apps, AI workflows, and technical strategies that help
-        companies win.
+        I&apos;m a solutions architect and full-stack engineer with 20+ years of
+        experience solving business problems and making users{' '}
+        <span className="text-green-400 font-semibold">happy</span>. I build
+        apps, workflows, and processes that help businesses get to market{' '}
+        <span className="text-yellow-400 font-semibold">quickly </span>
+        and keep developers{' '}
+        <span className="text-pink-400 font-semibold">sane</span>.
       </p>
       <div className="cta-buttons mt-10 flex flex-wrap justify-center gap-4">
         <a
@@ -65,7 +72,7 @@ const HeroSection: React.FC = () => {
           onMouseEnter={handleButtonHover}
           onMouseLeave={handleButtonLeave}
         >
-          Schedule a meeting with Lee
+          Schedule a meeting
         </a>
         <a
           href="mailto:Lee@releasemode.com"
@@ -88,7 +95,7 @@ const HeroSection: React.FC = () => {
         ref={arrowRef}
         className="mt-12 text-center font-mono text-lg text-white"
       >
-        ↓ Scroll down to see more
+        ↓ Scroll to see more
       </div>
     </section>
   );
