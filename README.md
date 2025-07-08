@@ -84,30 +84,30 @@ The site will be available at `http://localhost:4321` (or the next available por
 
 ```
 src/
-├── components/          # React components
+├── components/          # React and Astro components
 │   ├── HeroSection.tsx
-│   ├── HeroSectionChalk.tsx
-│   ├── HeroSectionRough.tsx
-│   ├── ChalkDivider.tsx
-│   ├── NavReact.tsx
-│   ├── ScrollEffects.tsx
-│   └── icons.tsx
+│   ├── NavSection.tsx
+│   ├── Icons.tsx
+│   ├── AboutSection.astro
+│   └── LinksSection.astro
 ├── layouts/            # Astro layouts
 │   └── BaseLayout.astro
 ├── pages/              # Astro pages
 │   └── index.astro
-└── styles/             # Global styles
-    └── global.css
+├── styles/             # Global styles
+│   └── global.css
+└── utils/              # Utility functions
+    └── scrollEffects.ts
 ```
 
 ## Components
 
-- **HeroSection**: Main landing section with animated text
-- **HeroSectionChalk**: Alternative hero with chalk-style design
-- **HeroSectionRough**: Hero with rough notation effects (currently disabled)
-- **ChalkDivider**: Visual divider component
-- **NavReact**: Navigation component
-- **ScrollEffects**: Scroll-triggered animations
+- **HeroSection**: Main landing section with animated text and GSAP animations
+- **NavSection**: Navigation component with social media links
+- **Icons**: Collection of social media and UI icons
+- **AboutSection**: Static about section (Astro component)
+- **LinksSection**: Static links section (Astro component)
+- **scrollEffects**: Utility function for scroll-triggered animations
 
 ## Deployment
 
