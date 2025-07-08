@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.tsx';
+import AboutSection from '../components/AboutSection.astro';
+import LinksSection from '../components/LinksSection.astro';
+---
+
+<BaseLayout>
+  <HeroSection client:load />
+  <AboutSection />
+  <LinksSection />
+</BaseLayout>

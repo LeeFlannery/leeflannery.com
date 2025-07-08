@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+import NavReact from '../components/NavSection';
+
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lee Flannery dot com</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Google Analytics -->
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+    <script>
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
+      }
+      gtag('js', new Date());
+      gtag('config', '{GA_MEASUREMENT_ID}');
+    </script>
+    
+    <!-- Scroll Effects -->
+    <script>
+      import { initScrollEffects } from '../utils/scrollEffects.ts';
+      document.addEventListener('DOMContentLoaded', initScrollEffects);
+    </script>
+  </head>
+  <body class="bg-white text-black dark:bg-black dark:text-white font-sans">
+    <NavReact client:load />
+    <slot />
+  </body>
+</html>
