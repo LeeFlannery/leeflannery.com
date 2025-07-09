@@ -14,5 +14,4 @@ export function initScrollEffects(): void {
     duration: 1,
     ease: 'power3.out',
   });
-
 }

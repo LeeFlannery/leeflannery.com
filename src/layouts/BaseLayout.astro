@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import NavReact from '../components/NavSection';
+import LinksSection from '../components/LinksSection.astro';
 
 const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
 ---
@@ -35,5 +36,6 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXX
   <body class="bg-white text-black dark:bg-black dark:text-white font-sans">
     <NavReact client:load />
     <slot />
+    <LinksSection />
   </body>
 </html>

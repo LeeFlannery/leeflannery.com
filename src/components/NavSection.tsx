@@ -36,7 +36,7 @@ const NavReact: React.FC = () => {
           </div>
           <a
             href="/"
-            className="font-mono text-lg tracking-wide text-white transition-colors hover:bg-white hover:text-black rounded px-1 py-0.5"
+            className="rounded px-1 py-0.5 font-mono text-lg tracking-wide text-white transition-colors hover:bg-white hover:text-black"
             onMouseEnter={handleLinkHover}
             onMouseLeave={handleLinkLeave}
           >
@@ -45,8 +45,8 @@ const NavReact: React.FC = () => {
         </div>
         <nav className="flex items-center space-x-4">
           <a
-            href="#about"
-            className="font-mono text-lg text-white transition-colors hover:bg-white hover:text-sky-400 rounded px-2 py-1"
+            href="/#about"
+            className="rounded px-2 py-1 font-mono text-lg text-white transition-colors hover:bg-white hover:text-sky-400"
             onMouseEnter={handleLinkHover}
             onMouseLeave={handleLinkLeave}
           >
@@ -56,7 +56,7 @@ const NavReact: React.FC = () => {
           <div className="ml-4 flex items-center space-x-3">
             <a
               href="https://bsky.app/profile/fullstackdrip.com"
-              className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
+              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
               title="Bluesky"
               aria-label="Bluesky profile"
               onMouseEnter={handleLinkHover}
@@ -67,7 +67,7 @@ const NavReact: React.FC = () => {
 
             <a
               href="https://github.com/leeflannery"
-              className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
+              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
               title="GitHub"
               aria-label="GitHub profile"
               onMouseEnter={handleLinkHover}
@@ -78,7 +78,7 @@ const NavReact: React.FC = () => {
 
             <a
               href="https://www.youtube.com/@FullStackDrip/shorts"
-              className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
+              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
               title="YouTube"
               aria-label="YouTube channel"
               onMouseEnter={handleLinkHover}
@@ -89,7 +89,7 @@ const NavReact: React.FC = () => {
 
             <a
               href="https://linkedin.com/in/leeflannery"
-              className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
+              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
               title="LinkedIn"
               aria-label="LinkedIn profile"
               onMouseEnter={handleLinkHover}
@@ -100,7 +100,7 @@ const NavReact: React.FC = () => {
 
             <a
               href="https://www.instagram.com/fullstackdrip"
-              className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
+              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
               title="Instagram"
               aria-label="Instagram profile"
               onMouseEnter={handleLinkHover}
@@ -111,7 +111,7 @@ const NavReact: React.FC = () => {
 
             <a
               href="https://threads.net/@fullstackdrip"
-              className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
+              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
               title="Threads"
               aria-label="Threads profile"
               onMouseEnter={handleLinkHover}
