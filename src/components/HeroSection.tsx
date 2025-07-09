@@ -1,11 +1,7 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 import gsap from 'gsap';
 
 const HeroSection: React.FC = () => {
-  const headlineRef = useRef<HTMLHeadingElement>(null);
-  const subRef = useRef<HTMLParagraphElement>(null);
-  const arrowRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     // GSAP animation
     gsap.from('.hero-text', {
@@ -40,21 +36,18 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="flex min-h-screen flex-col items-center justify-center bg-black px-4 pt-0 text-white">
-      <h1
-        ref={headlineRef}
-        className="hero-text max-w-3xl text-center text-4xl font-bold md:text-6xl"
-      >
+      <h1 className="hero-text max-w-3xl text-center text-4xl font-bold md:text-6xl">
         See Connections.
         <br /> Build Solutions.
         <br /> Ship Results.
       </h1>
       <p
-        ref={subRef}
-        className="mt-6 max-w-2xl text-center text-lg md:text-xl font-bold"
+        className="mt-6 max-w-2xl text-center text-lg md:text-xl
+         font-bold"
       >
         Hi! I&apos;m Lee Flannery.
       </p>
-      <p ref={subRef} className="mt-6 max-w-2xl text-center text-lg md:text-xl">
+      <p className="mt-6 max-w-2xl text-center text-lg md:text-xl">
         I&apos;m a solutions architect and full-stack engineer with 20+ years of
         experience solving business problems and making users{' '}
         <span className="text-green-400 font-semibold">happy</span>. I build
@@ -91,10 +84,7 @@ const HeroSection: React.FC = () => {
           See Some Code
         </a>
       </div>
-      <div
-        ref={arrowRef}
-        className="mt-12 text-center font-mono text-lg text-white"
-      >
+      <div className="mt-12 text-center font-mono text-lg text-white">
         ↓ Scroll to see more
       </div>
     </section>
