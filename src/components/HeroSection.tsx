@@ -76,7 +76,7 @@ const HeroSection: React.FC = () => {
           Contact Lee
         </a>
         <a
-          href="#"
+          href="https://github.com/leeflannery"
           className="rounded-lg border-2 border-purple-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-purple-400 shadow-lg transition-colors hover:bg-purple-400 hover:text-gray-900"
           onMouseEnter={handleButtonHover}
           onMouseLeave={handleButtonLeave}
