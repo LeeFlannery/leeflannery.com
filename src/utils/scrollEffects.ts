@@ -15,15 +15,4 @@ export function initScrollEffects(): void {
     ease: 'power3.out',
   });
 
-  gsap.from('#links a', {
-    scrollTrigger: {
-      trigger: '#links',
-      start: 'top 85%',
-    },
-    opacity: 0,
-    y: 30,
-    stagger: 0.15,
-    duration: 0.8,
-    ease: 'power2.out',
-  });
 }

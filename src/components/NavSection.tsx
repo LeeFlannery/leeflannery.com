@@ -58,6 +58,7 @@ const NavReact: React.FC = () => {
               href="https://bsky.app/profile/fullstackdrip.com"
               className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
               title="Bluesky"
+              aria-label="Bluesky profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
@@ -68,6 +69,7 @@ const NavReact: React.FC = () => {
               href="https://github.com/leeflannery"
               className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
               title="GitHub"
+              aria-label="GitHub profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
@@ -78,6 +80,7 @@ const NavReact: React.FC = () => {
               href="https://www.youtube.com/@FullStackDrip/shorts"
               className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
               title="YouTube"
+              aria-label="YouTube channel"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
@@ -88,6 +91,7 @@ const NavReact: React.FC = () => {
               href="https://linkedin.com/in/leeflannery"
               className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
               title="LinkedIn"
+              aria-label="LinkedIn profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
@@ -98,6 +102,7 @@ const NavReact: React.FC = () => {
               href="https://www.instagram.com/fullstackdrip"
               className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
               title="Instagram"
+              aria-label="Instagram profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
@@ -108,6 +113,7 @@ const NavReact: React.FC = () => {
               href="https://threads.net/@fullstackdrip"
               className="text-white transition-colors hover:bg-white hover:text-sky-400 rounded p-1"
               title="Threads"
+              aria-label="Threads profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
