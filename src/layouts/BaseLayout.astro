@@ -2,6 +2,10 @@
 import '../styles/global.css';
 import NavReact from '../components/NavSection';
 import LinksSection from '../components/LinksSection.astro';
+import faviconIco from '../assets/favicon.ico';
+import faviconSvg from '../assets/favicon.svg';
+import faviconPng from '../assets/favicon-32x32.png';
+import appleTouchIcon from '../assets/apple-touch-icon.png';
 
 const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
 ---
@@ -12,11 +16,11 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXX
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lee Flannery dot com</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="shortcut icon" href={faviconIco} type="image/x-icon" />
+    <link rel="icon" href={faviconIco} type="image/x-icon" />
+    <link rel="icon" href={faviconSvg.src} type="image/svg+xml" />
+    <link rel="icon" href={faviconPng.src} type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href={appleTouchIcon.src} sizes="180x180" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#000000" />
     
