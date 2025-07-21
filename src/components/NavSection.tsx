@@ -32,39 +32,29 @@ const NavReact: React.FC = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         <div className="flex items-center space-x-2">
           <div className="flex items-center space-x-1">
-            <GlassesIcon className="h-10 w-10 text-blue-500" />
+            <GlassesIcon className="h-8 w-8 text-blue-500 md:h-10 md:w-10" />
           </div>
           <a
             href="/"
-            className="rounded px-1 py-0.5 font-mono text-lg tracking-wide text-white transition-colors hover:bg-white hover:text-black"
+            className="rounded px-1 py-0.5 font-mono text-base tracking-wide text-white transition-colors hover:bg-white hover:text-black md:text-lg"
             onMouseEnter={handleLinkHover}
             onMouseLeave={handleLinkLeave}
           >
             Lee Flannery dot com
           </a>
         </div>
-        <nav className="flex items-center space-x-4">
+        <nav className="flex items-center space-x-2 md:space-x-4">
           <a
             href="/#about"
-            className="rounded px-2 py-1 font-mono text-lg text-white transition-colors hover:bg-white hover:text-sky-400"
+            className="rounded px-2 py-1 font-mono text-base text-white transition-colors hover:bg-white hover:text-sky-400 md:text-lg"
             onMouseEnter={handleLinkHover}
             onMouseLeave={handleLinkLeave}
           >
             About
           </a>
           {/* Social Media Icons */}
-          <div className="ml-4 flex items-center space-x-3">
-            <a
-              href="https://bsky.app/profile/fullstackdrip.com"
-              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
-              title="Bluesky"
-              aria-label="Bluesky profile"
-              onMouseEnter={handleLinkHover}
-              onMouseLeave={handleLinkLeave}
-            >
-              <BlueskyIcon />
-            </a>
-
+          <div className="ml-2 flex items-center space-x-1 md:ml-4 md:space-x-3">
+            {/* Primary social icons - always visible */}
             <a
               href="https://github.com/leeflannery"
               className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
@@ -73,18 +63,7 @@ const NavReact: React.FC = () => {
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <GitHubIcon />
-            </a>
-
-            <a
-              href="https://www.youtube.com/@FullStackDrip/shorts"
-              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
-              title="YouTube"
-              aria-label="YouTube channel"
-              onMouseEnter={handleLinkHover}
-              onMouseLeave={handleLinkLeave}
-            >
-              <YouTubeIcon />
+              <GitHubIcon className="h-4 w-4 md:h-5 md:w-5" />
             </a>
 
             <a
@@ -95,29 +74,52 @@ const NavReact: React.FC = () => {
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <LinkedInIcon />
+              <LinkedInIcon className="h-4 w-4 md:h-5 md:w-5" />
+            </a>
+
+            {/* Secondary social icons - hidden on very small screens */}
+            <a
+              href="https://bsky.app/profile/fullstackdrip.com"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 sm:block"
+              title="Bluesky"
+              aria-label="Bluesky profile"
+              onMouseEnter={handleLinkHover}
+              onMouseLeave={handleLinkLeave}
+            >
+              <BlueskyIcon className="h-4 w-4 md:h-5 md:w-5" />
+            </a>
+
+            <a
+              href="https://www.youtube.com/@FullStackDrip/shorts"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 sm:block"
+              title="YouTube"
+              aria-label="YouTube channel"
+              onMouseEnter={handleLinkHover}
+              onMouseLeave={handleLinkLeave}
+            >
+              <YouTubeIcon className="h-4 w-4 md:h-5 md:w-5" />
             </a>
 
             <a
               href="https://www.instagram.com/fullstackdrip"
-              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 sm:block"
               title="Instagram"
               aria-label="Instagram profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <InstagramIcon />
+              <InstagramIcon className="h-4 w-4 md:h-5 md:w-5" />
             </a>
 
             <a
               href="https://threads.net/@fullstackdrip"
-              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 sm:block"
               title="Threads"
               aria-label="Threads profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <AtSignIcon />
+              <AtSignIcon className="h-4 w-4 md:h-5 md:w-5" />
             </a>
           </div>
         </nav>
