@@ -56,7 +56,7 @@ The site will be available at `http://localhost:4321` (or the next available por
 2. Get your Measurement ID (starts with `G-`)
 3. Add it to your `.env` file:
    ```
-   PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+   PUBLIC_GA_ID=G-XXXXXXXXXX
    ```
 4. Replace `G-XXXXXXXXXX` with your actual Measurement ID
 

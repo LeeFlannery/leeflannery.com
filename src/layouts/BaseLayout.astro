@@ -7,7 +7,7 @@ import faviconSvg from '../assets/favicon.svg';
 import faviconPng from '../assets/favicon-32x32.png';
 import appleTouchIcon from '../assets/apple-touch-icon.png';
 
-const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
 ---
 
 <!DOCTYPE html>
@@ -25,14 +25,12 @@ const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXX
     <meta name="theme-color" content="#000000" />
     
     <!-- Google Analytics -->
-    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
-    <script>
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      function gtag(...args: any[]) {
-        (window as any).dataLayer.push(args);
-      }
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+    <script define:vars={{ GA_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '{GA_MEASUREMENT_ID}');
+      gtag('config', GA_ID);
     </script>
     
     <!-- Scroll Effects -->
