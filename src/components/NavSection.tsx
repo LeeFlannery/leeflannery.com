@@ -52,74 +52,85 @@ const NavReact: React.FC = () => {
           >
             About
           </a>
-          {/* Social Media Icons */}
+          {/* Mobile: Links button, Desktop: Social Media Icons */}
           <div className="ml-2 flex items-center space-x-1 md:ml-4 md:space-x-3">
-            {/* Primary social icons - always visible */}
+            {/* Mobile Links button */}
+            <a
+              href="/#links"
+              className="rounded px-2 py-1 font-mono text-base text-white transition-colors hover:bg-white hover:text-sky-400 md:hidden"
+              title="All Links"
+              aria-label="View all links"
+              onMouseEnter={handleLinkHover}
+              onMouseLeave={handleLinkLeave}
+            >
+              Links
+            </a>
+
+            {/* Desktop social icons */}
             <a
               href="https://github.com/leeflannery"
-              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 md:block"
               title="GitHub"
               aria-label="GitHub profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <GitHubIcon className="h-4 w-4 md:h-5 md:w-5" />
+              <GitHubIcon className="h-5 w-5" />
             </a>
 
             <a
               href="https://linkedin.com/in/leeflannery"
-              className="rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 md:block"
               title="LinkedIn"
               aria-label="LinkedIn profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <LinkedInIcon className="h-4 w-4 md:h-5 md:w-5" />
+              <LinkedInIcon className="h-5 w-5" />
             </a>
 
-            {/* Secondary social icons - hidden on very small screens */}
             <a
               href="https://bsky.app/profile/fullstackdrip.com"
-              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 sm:block"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 md:block"
               title="Bluesky"
               aria-label="Bluesky profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <BlueskyIcon className="h-4 w-4 md:h-5 md:w-5" />
+              <BlueskyIcon className="h-5 w-5" />
             </a>
 
             <a
               href="https://www.youtube.com/@FullStackDrip/shorts"
-              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 sm:block"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 md:block"
               title="YouTube"
               aria-label="YouTube channel"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <YouTubeIcon className="h-4 w-4 md:h-5 md:w-5" />
+              <YouTubeIcon className="h-5 w-5" />
             </a>
 
             <a
               href="https://www.instagram.com/fullstackdrip"
-              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 sm:block"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 md:block"
               title="Instagram"
               aria-label="Instagram profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <InstagramIcon className="h-4 w-4 md:h-5 md:w-5" />
+              <InstagramIcon className="h-5 w-5" />
             </a>
 
             <a
               href="https://threads.net/@fullstackdrip"
-              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 sm:block"
+              className="hidden rounded p-1 text-white transition-colors hover:bg-white hover:text-sky-400 md:block"
               title="Threads"
               aria-label="Threads profile"
               onMouseEnter={handleLinkHover}
               onMouseLeave={handleLinkLeave}
             >
-              <AtSignIcon className="h-4 w-4 md:h-5 md:w-5" />
+              <AtSignIcon className="h-5 w-5" />
             </a>
           </div>
         </nav>
