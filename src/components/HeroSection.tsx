@@ -67,12 +67,12 @@ const HeroSection: React.FC = () => {
       </p>
       
       {/* Blog CTA */}
-      <div className="mt-8 mb-0">
+      <div className="mt-8 mb-0 text-center">
         <a
           href="https://fullstackdrip.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="blog-cta inline-block rounded-lg border-2 border-pink-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-pink-400 shadow-lg transition-all hover:bg-pink-400 hover:text-gray-900 hover:scale-105"
+          className="blog-cta inline-block rounded-lg border-2 border-pink-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-pink-400 shadow-lg transition-all hover:bg-pink-400 hover:text-gray-900 hover:scale-105 text-center"
           onMouseEnter={handleButtonHover}
           onMouseLeave={handleButtonLeave}
         >
