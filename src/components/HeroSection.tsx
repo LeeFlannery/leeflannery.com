@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
       </p>
       
       {/* Blog CTA */}
-      <div className="mt-4 mb-0">
+      <div className="mt-8 mb-0">
         <a
           href="https://fullstackdrip.com"
           target="_blank"
