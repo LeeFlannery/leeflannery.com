@@ -3,12 +3,41 @@ import gsap from 'gsap';
 
 const HeroSection: React.FC = () => {
   useEffect(() => {
-    // GSAP animation
+    // GSAP animations
     gsap.from('.hero-text', {
       opacity: 0,
       y: 40,
       duration: 1,
       ease: 'power3.out',
+    });
+
+    // Animate CTA buttons with stagger
+    gsap.from('.cta-button', {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      stagger: 0.2,
+      delay: 0.5,
+      ease: 'power3.out',
+    });
+
+    // Animate blog CTA separately
+    gsap.from('.blog-cta', {
+      opacity: 0,
+      y: 20,
+      duration: 0.6,
+      delay: 0.3,
+      ease: 'power3.out',
+    });
+
+    // Add pulsing animation to blog CTA
+    gsap.to('.blog-cta', {
+      scale: 1.02,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power2.inOut',
+      delay: 1, // Start pulsing after entrance animation
     });
   }, []);
 
@@ -44,7 +73,7 @@ const HeroSection: React.FC = () => {
       <p className="mt-6 max-w-2xl text-center text-lg font-bold md:text-xl">
         Hi! I&apos;m Lee Flannery.
       </p>
-      <p className="mb-12 mt-6 max-w-2xl text-center text-lg md:text-xl">
+      <p className="mb-2 mt-6 max-w-2xl text-center text-lg md:text-xl">
         I&apos;m a solutions architect and full-stack engineer with 20+ years of
         experience solving business problems and making users{' '}
         <span className="font-semibold text-green-400">happy</span>. I build
@@ -55,12 +84,12 @@ const HeroSection: React.FC = () => {
       </p>
       
       {/* Blog CTA */}
-      <div className="mt-2 mb-4">
+      <div className="mt-1 mb-4">
         <a
           href="https://fullstackdrip.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block rounded-lg border-2 border-pink-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-pink-400 shadow-lg transition-all hover:bg-pink-400 hover:text-gray-900 hover:scale-105"
+          className="blog-cta inline-block rounded-lg border-2 border-pink-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-pink-400 shadow-lg transition-all hover:bg-pink-400 hover:text-gray-900 hover:scale-105"
           onMouseEnter={handleButtonHover}
           onMouseLeave={handleButtonLeave}
         >
@@ -73,7 +102,7 @@ const HeroSection: React.FC = () => {
           href="https://cal.com/releasemode-lee"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-lg border-2 border-green-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-green-400 shadow-lg transition-colors hover:bg-green-400 hover:text-gray-900"
+          className="cta-button rounded-lg border-2 border-green-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-green-400 shadow-lg transition-colors hover:bg-green-400 hover:text-gray-900"
           onMouseEnter={handleButtonHover}
           onMouseLeave={handleButtonLeave}
         >
@@ -81,7 +110,7 @@ const HeroSection: React.FC = () => {
         </a>
         <a
           href="mailto:Lee@releasemode.com"
-          className="rounded-lg border-2 border-blue-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-blue-400 shadow-lg transition-colors hover:bg-blue-400 hover:text-gray-900"
+          className="cta-button rounded-lg border-2 border-blue-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-blue-400 shadow-lg transition-colors hover:bg-blue-400 hover:text-gray-900"
           onMouseEnter={handleButtonHover}
           onMouseLeave={handleButtonLeave}
         >
@@ -89,7 +118,7 @@ const HeroSection: React.FC = () => {
         </a>
         <a
           href="/projects"
-          className="rounded-lg border-2 border-purple-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-purple-400 shadow-lg transition-colors hover:bg-purple-400 hover:text-gray-900"
+          className="cta-button rounded-lg border-2 border-purple-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-purple-400 shadow-lg transition-colors hover:bg-purple-400 hover:text-gray-900"
           onMouseEnter={handleButtonHover}
           onMouseLeave={handleButtonLeave}
         >
