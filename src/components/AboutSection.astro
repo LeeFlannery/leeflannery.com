@@ -1,13 +1,25 @@
 ---
 // AboutSection.astro - Static about section
+import leePhoto from '../assets/lee-blue-shirt-etherial-filter.png';
 ---
 
 <section id="about" class="bg-white text-black py-20 px-4">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">Hi, I&apos;m Lee!</h2>
-    <p class="text-lg leading-relaxed mt-2 mb-2">
-      I'm a principal-level solutions architect, technical consultant, and full-stack developer. I'm glad you're here!
-    </p>
+    <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
+      <div class="flex-shrink-0">
+        <img 
+          src={leePhoto.src} 
+          alt="Lee Flannery" 
+          class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-lg border-4 border-gray-200"
+        />
+      </div>
+      <div class="flex-1">
+        <h2 class="text-3xl font-bold mb-4">Hi, I&apos;m Lee!</h2>
+        <p class="text-lg leading-relaxed">
+          I'm a principal-level solutions architect, technical consultant, and full-stack developer. I'm glad you're here!
+        </p>
+      </div>
+    </div>
     <p class="text-lg leading-relaxed mt-2 mb-2">
       Over the last two decades, I’ve built software for startups, Fortune 500s, and everything in between. I look for patterns, ask the right questions, and bring clarity to messy problems.
     </p>
