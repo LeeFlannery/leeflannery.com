@@ -51,9 +51,24 @@ const HeroSection: React.FC = () => {
         apps, workflows, and processes that help businesses get to market{' '}
         <span className="font-semibold text-yellow-400">quickly </span>
         and keep developers{' '}
-        <span className="font-semibold text-pink-400">sane</span>.
+        <span className="font-semibold text-blue-400">sane</span>.
       </p>
-      <div className="cta-buttons mt-16 flex flex-wrap justify-center gap-4">
+      
+      {/* Blog CTA */}
+      <div className="mt-2 mb-4">
+        <a
+          href="https://fullstackdrip.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block rounded-lg border-2 border-pink-400 bg-gray-900 px-6 py-3 font-mono font-semibold text-pink-400 shadow-lg transition-all hover:bg-pink-400 hover:text-gray-900 hover:scale-105"
+          onMouseEnter={handleButtonHover}
+          onMouseLeave={handleButtonLeave}
+        >
+          📝 My blog content is at Full Stack Drip
+        </a>
+      </div>
+      
+      <div className="cta-buttons mt-8 flex flex-wrap justify-center gap-4">
         <a
           href="https://cal.com/releasemode-lee"
           target="_blank"
