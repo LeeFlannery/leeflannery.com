@@ -21,24 +21,7 @@ const HeroSection: React.FC = () => {
       ease: 'power3.out',
     });
 
-    // Animate blog CTA separately
-    gsap.from('.blog-cta', {
-      opacity: 0,
-      y: 20,
-      duration: 0.6,
-      delay: 0.3,
-      ease: 'power3.out',
-    });
-
-    // Add pulsing animation to blog CTA
-    gsap.to('.blog-cta', {
-      scale: 1.02,
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power2.inOut',
-      delay: 1, // Start pulsing after entrance animation
-    });
+    // Blog CTA is visible by default - no GSAP animation
   }, []);
 
   const handleButtonHover = useCallback(
@@ -84,7 +67,7 @@ const HeroSection: React.FC = () => {
       </p>
       
       {/* Blog CTA */}
-      <div className="mt-1 mb-4">
+      <div className="mt-4 mb-0">
         <a
           href="https://fullstackdrip.com"
           target="_blank"
@@ -97,7 +80,7 @@ const HeroSection: React.FC = () => {
         </a>
       </div>
       
-      <div className="cta-buttons mt-8 flex flex-wrap justify-center gap-4">
+      <div className="cta-buttons mt-4 flex flex-wrap justify-center gap-4">
         <a
           href="https://cal.com/releasemode-lee"
           target="_blank"
